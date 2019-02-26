@@ -13,8 +13,9 @@ gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', github: 'sferik/rails_admin'
 gem 'rails_admin_rollincode', '~> 1.0'
 gem 'omniauth-google-oauth2'
-gem 'sqlite3', '~> 1.3.6'
+
 gem 'simple_form'
+gem 'pg'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -57,6 +58,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'sqlite3', '~> 1.3.6'
 end
 
 group :test do
