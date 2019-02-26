@@ -14,6 +14,7 @@ gem 'rails_admin', github: 'sferik/rails_admin'
 gem 'rails_admin_rollincode', '~> 1.0'
 gem 'omniauth-google-oauth2'
 gem 'sqlite3', '~> 1.3.6'
+gem 'simple_form'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
