@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post 'home/submit'
   get 'home/team'
 
+  get 'home/newform'
+
 
   post 'hackathon/submit'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
