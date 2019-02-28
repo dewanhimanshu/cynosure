@@ -1,5 +1,10 @@
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
 <style>
 body {
     margin: 0;
@@ -115,7 +120,6 @@ body {
 
 </style>
 </head>
-
 <div id="progress"></div>
 
 <div class="center">
@@ -217,7 +221,12 @@ var request = $.ajax({
     method: "POST",
     data: { id : questions }
   });
-
+   request.done(function( msg ) {
+     setTimeout(function(){
+         document.location.href = 'https://cynosurehrc.herokuapp.com';
+         localStorage.setItem('hack', 'true')
+       },2000)
+     });
     request.fail(function( jqXHR, textStatus ) {
         alert( "Request failed: " + textStatus );
         document.location.href = '/home/newform';
