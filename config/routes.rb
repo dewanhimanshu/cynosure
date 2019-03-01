@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'hackathon/register'
   root 'home#index'
   get 'home/contact'
@@ -7,6 +8,13 @@ Rails.application.routes.draw do
   get 'home/team'
 
   get 'home/newform'
+
+
+  #bug-events
+  get 'bugevent/index'
+  get 'bugevent/link'
+
+  get 'bugevent/getlikes'
 
 
   post 'hackathon/submit'
