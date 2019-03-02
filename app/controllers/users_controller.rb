@@ -8,20 +8,20 @@ class UsersController < ApplicationController
     def complete2
       
         if current_user.event1 == false
-            render :json => {
+           return render :json => {
                 smart:'Yr Event1 Phele Karlo Please ',
                 link:'bugevent/index'
               }
         end
         
         if params[:password] != current_user.token
-             render :json => {
+            return render :json => {
                 smart:'Looks like you are OverSmart But Your Ans Is Wrong'
               }
         else
             current_user.event2 = true
             current_user.save
-            render :json =>{
+          return  render :json =>{
                 ans:'success',
                 link:'users/event3'
             }
