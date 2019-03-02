@@ -16,11 +16,16 @@ Rails.application.routes.draw do
   get 'bugevent/test'
   get 'bugevent/getlikes'
 
+  get 'users/event2'
+  
+  post 'users/complete2'
+
   get 'like/increase'
 
   post 'users/complete1'
 
-
+  post 'users/complete3'
+  get 'users/event3'
   get 'like/mafia'
  
 
