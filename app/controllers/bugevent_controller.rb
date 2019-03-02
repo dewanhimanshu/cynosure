@@ -1,4 +1,6 @@
 class BugeventController < ApplicationController
+  #before_action :authenticate_user! , except: [:index,:link]
+  
   def index
   end
 
@@ -11,8 +13,20 @@ class BugeventController < ApplicationController
     }
 
     def getlikes
-      
+      @likes = current_user.like_count
+ 
     end
+
+    def increase
+   
+      current_user.like_count =  current_user.like_count + 1
+      render :json => {
+        likes:current_user.like_count
+      }
+    end
+   
+
+    
 
 
   end

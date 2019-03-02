@@ -13,9 +13,16 @@ Rails.application.routes.draw do
   #bug-events
   get 'bugevent/index'
   get 'bugevent/link'
-
+  get 'bugevent/test'
   get 'bugevent/getlikes'
 
+  get 'like/increase'
+
+  post 'users/complete1'
+
+
+  get 'like/mafia'
+ 
 
   post 'hackathon/submit'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
