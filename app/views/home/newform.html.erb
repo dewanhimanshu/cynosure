@@ -116,13 +116,28 @@ body {
   .wrong #inputProgress {
     border-color: #ff2d26;
   }
+  .heading{
+    position: absolute;
+    top: 20% ;
+    text-align:center;
+    font-family: monospace;
+    font-size: 4rem;
+    color: white;
+    border-bottom: 2px solid beige;
+}
+  }
   
 
 </style>
 </head>
+
 <div id="progress"></div>
 
+
 <div class="center">
+<div class='heading'>
+  HackHansraj 1.0
+</div>
 
   <div id="register">
 
@@ -242,7 +257,7 @@ var request = $.ajax({
       // set the value of the field into the array
       questions[position].value = inputField.value
 
-      if(inputField.name=='team_members_count'&&inputField.value>=4){
+      if(inputField.name=='team_members_count'&&inputField.value >= 5){
         wrong()
         return
       }
