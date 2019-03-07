@@ -91,13 +91,13 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'cynosurehrc.herokuapp.com',
-  user_name:            'ordinateur.hansrajcollege@gmail.com',
-  password:             'Cynosure2k19',
-  authentication:       :plain,
-  enable_starttls_auto: true
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'cynosurehrc.heroku.com',
+    user_name:            'ordinateur.hansrajcollege@gmail.com',
+    password:             'Cynosure2k19',
+    authentication:       :plain,
+    enable_starttls_auto: true
+  }
 end
