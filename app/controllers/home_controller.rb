@@ -54,6 +54,7 @@ class HomeController < ApplicationController
     end
 
     r.save
+    RegisterMailer.with(email:r.email,name:r.name).welcome_email.deliver_now
     flash[:success] = "Succesfully Registered For Events"
     redirect_to root_url
     
