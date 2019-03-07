@@ -16,7 +16,7 @@ class UsersController < ApplicationController
         
         if params[:password] != current_user.token
             return render :json => {
-                smart:'Looks like you are OverSmart But Your Ans Is Wrong'
+                smart:'Your Ans Is Wrong'
               }
         else
             current_user.event2 = true
@@ -44,23 +44,22 @@ class UsersController < ApplicationController
 
     def complete3
         
-        if params[:ans] = 'Wow! I am The Winner Of it ...'
+        if params[:ans] = 'Wow! I am i have completed it ...'
             user = User.find_by(token:params[:token])
             if user != nil
             Winner.create(user_id:user.id)
             render :json=>{
-                contact:'WhatsApp on 8383006342',
-                code:'I have a crush on You !!'
+                message:'Wait for your ranking we will contact you soon'
             }
             else
                 render :json=>{
-                    token:"Dekh Bahi Token De"
+                    token:"Need Token"
                 }
         end
 
         else
             render :json=>{
-                token:"Dekh Bahi Masti Na Rak "
+                token:"Ans is Wrong "
             }  
         end   
     end

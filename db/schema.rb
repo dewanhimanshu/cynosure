@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_02_112050) do
+ActiveRecord::Schema.define(version: 2019_03_07_164914) do
 
   create_table "hackathons", force: :cascade do |t|
     t.string "team_name", null: false
@@ -28,6 +28,20 @@ ActiveRecord::Schema.define(version: 2019_03_02_112050) do
     t.integer "count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "registers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "college"
+    t.string "number"
+    t.boolean "hunt"
+    t.boolean "coding"
+    t.boolean "quiz"
+    t.boolean "web"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "bug"
   end
 
   create_table "users", force: :cascade do |t|
