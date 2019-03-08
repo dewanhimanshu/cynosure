@@ -60,11 +60,11 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
+  address:              'smtp.sendgrid.net',
+  port:                  25,
   domain:               'localhost',
-  user_name:            'ordinateur.hansrajcollege@gmail.com',
-  password:             'Cynosure2k19',
+  user_name:            'himanshu',
+  password:             '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',
   authentication:       :plain,
   enable_starttls_auto: true
 }
