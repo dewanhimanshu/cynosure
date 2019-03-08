@@ -13,6 +13,7 @@ class HackathonController < ApplicationController
 
       )
       h.save
+      RegisterMailer.with(email:h.email_id,name:h.leader_name).hack.deliver_now
       flash[:success] = "Succesfully Registered For Hackathon"
       redirect_to root_url
   end

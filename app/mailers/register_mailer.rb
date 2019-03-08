@@ -5,4 +5,10 @@ class RegisterMailer < ApplicationMailer
         @email  = params[:email]
         mail(to: @email, subject: 'Thankyou See you at Cynosure19')
       end
+
+    def hack
+      @name = params[:name]
+      @email  = params[:email]
+      mail(to: @email, subject: 'Thankyou Hacker , See you at Hackathon')
+    end
 end
