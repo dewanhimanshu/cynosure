@@ -2,7 +2,7 @@
 <head>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
-<h1>Likes Page :: Target is 1000 Likes </h1>
+<h1>Likes Page :: Target is 5000 Likes </h1>
 
 <div id='show' >0</div>
 <button id='btn' onclick="myFunction()">Like</button>
@@ -14,10 +14,11 @@ localStorage.setItem('likes',0)
       console.log('trigger')
       like_count = localStorage.getItem('likes'); 
       like_count =  parseInt(like_count) + 1
-      if(like_count>1000){
+      if(like_count>5000){
           axios.post('/users/complete1',{data:'data'})
             .then(function(response){
                 console.log('Successful')
+                console.log('Next Link is::','http://cynosurehrc.herokuapp.com/users/event2')
             })
       }
       localStorage.setItem('likes',like_count);

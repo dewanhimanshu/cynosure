@@ -1,5 +1,6 @@
 class BugeventController < ApplicationController
   #before_action :authenticate_user! , except: [:index,:link]
+  before_action :authenticate_user! 
   
   def index
   end

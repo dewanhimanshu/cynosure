@@ -43,9 +43,8 @@ class UsersController < ApplicationController
 
 
     def complete3
-        
-        
-        if params[:ans] = 'Wow! I am i have completed it ...'
+
+        if params[:ans] == 'Wow! I am The Winner Of it ...'
             user = User.find_by(token:params[:token])
             if user != nil
             Winner.create(user_id:user.id)
