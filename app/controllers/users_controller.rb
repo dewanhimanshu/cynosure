@@ -44,7 +44,7 @@ class UsersController < ApplicationController
 
     def complete3
         
-        byebug
+        
         if params[:ans] = 'Wow! I am i have completed it ...'
             user = User.find_by(token:params[:token])
             if user != nil
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
                 render :json=>{
                     token:"Need Token"
                 }
-        end
+            end
 
         else
             render :json=>{
