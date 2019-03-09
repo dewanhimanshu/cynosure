@@ -160,7 +160,7 @@ body {
 var questions = [
     {question:"What's your Team Name?"},
     {question:"What's your Your name?"},
-    {question:"Number of Members(Max:4)?", type:'number'},
+    {question:"Number of Members(Max:5)?", type:'number'},
     {question:'Contact Number',pattern:/^[0][1-9]\d{9}$|^[1-9]\d{9}$/},
     {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
  
@@ -259,7 +259,7 @@ var request = $.ajax({
       // set the value of the field into the array
       questions[position].value = inputField.value
 
-      if(inputField.name=='team_members_count'&&inputField.value >= 5){
+      if(inputField.name=='team_members_count'&&inputField.value >= 6){
         wrong()
         return
       }
