@@ -96,7 +96,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'cynosurehrc.heroku.com',
     user_name:            'ordinateur.hansrajcollege@gmail.com',
-    password:             'Cynosure2k19',
+    password:              ENV["MAIL_PASSWORD"],
     authentication:       :plain,
     enable_starttls_auto: true
   }

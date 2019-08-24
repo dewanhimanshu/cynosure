@@ -31,3 +31,8 @@
 
 en:
   hello: "Hello world"
+  MAIL_USERNAME: 'Your_Username'
+  MAIL_PASSWORD: 'Cynosure2k19'
+  SEND_GRID : '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'
+
+
